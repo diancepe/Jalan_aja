@@ -1,97 +1,115 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DECEPE - VIRTUAL TOUR</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #2c3e50;
-            color: #;
-        }
-       .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #40E0D0; /* Tosca terang */
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .room-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        .room-card {
-            background: #40E0D0;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .room-card h3 {
-            color: #40E0D0;
-            margin-bottom: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DECEPE - VIRTUAL TOUR</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f1a;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #40E0D0;
+      text-shadow: 0 0 10px #40E0D0;
+      margin-bottom: 40px;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #b0f5f0;
+    }
+
+    .room-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .room-card {
+      background: rgba(64, 224, 208, 0.08);
+      border: 2px solid #40E0D0;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      color: #ffffff;
+      box-shadow: 0 0 12px rgba(64, 224, 208, 0.3);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    .room-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(64, 224, 208, 0.8);
+      cursor: pointer;
+    }
+
+    .room-card h3 {
+      margin-bottom: 10px;
+      color: #40E0D0;
+      font-size: 1.3rem;
+      text-shadow: 0 0 5px #40E0D0;
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+  </style>
 </head>
 <body>
+  <div class="container">
+    <h1>DECEPE - VIRTUAL TOUR</h1>
+    <p class="intro">Selamat datang di virtual tour gedung Visibel Ai.</p>
+
     <div class="room-grid">
-    <a href="visibel-ai.html" style="text-decoration: none; color: inherit;">
-        <div class="room-card">
-            <h3>GEDUNG VISIBEL AI</h3>
-            <p>Gedung yang menyediakan beberapa fasilitas yang berhubungan dengan AI.</p>
-        </div>
-    </a>
-    
-    <a href="lobby.html" style="text-decoration: none; color: inherit;">
-        <div class="room-card">
-            <h3>MAIN LOBBY</h3>
-            <p>Lobby utama yang di desain khusus untuk terlihat lebih ekegan dan keren.</p>
+      <div class="room-card">
+        <h3>GEDUNG VISIBEL AI</h3>
+        <p>Gedung yang menyediakan berbagai fasilitas canggih berteknologi AI.</p>
+      </div>
+      <div class="room-card">
+        <h3>MAIN LOBBY</h3>
+        <p>Lobby utama futuristik dengan desain modern dan sistem otomatisasi.</p>
+      </div>
+      <div class="room-card">
+        <h3>MONITORING ROOM</h3>
+        <p>Ruangan pusat pemantauan sistem dan perangkat pintar.</p>
+      </div>
+      <div class="room-card">
+        <h3>MEETING ROOM</h3>
+        <p>Tempat diskusi kreatif berteknologi tinggi untuk tim masa depan.</p>
+      </div>
+      <div class="room-card">
+        <h3>DATA CENTER</h3>
+        <p>Ruang penyimpanan server berkeamanan tinggi dengan pendingin otomatis.</p>
+      </div>
+      <div class="room-card">
+        <h3>CONTAINMENT</h3>
+        <p>Area aman untuk pengujian dan perlindungan sistem AI sensitif.</p>
+      </div>
+    </div>
 
-            <div class="virtual-tour">
-            <!-- Ganti link iframe ini dengan link panorama 360 atau virtual tour -->
-            <iframe src="https://file:///D:/12.%20Room%20Tour/project-title%20(4)/app-files/index.html" allowfullscreen></iframe>
-            <div>
-        </div>
-    </a>
-    
-    <a href="monitoring.html" style="text-decoration: none; color: inherit;">
-        <div class="room-card">
-            <h3>MONITORING ROOM</h3>
-            <p>Ruangan yang di desain untuk memonitoring semua perangkat yang ada.</p>
-        </div>
-    </a>
-    
-    <a href="meeting.html" style="text-decoration: none; color: inherit;">
-        <div class="room-card">
-            <h3>MEETING ROOM</h3>
-            <p>Ruangan yang di buat demi kenyamanan untuk inspirasi dan berttukan fikiran.</p>
-        </div>
-    </a>
-    
-    <a href="data-center.html" style="text-decoration: none; color: inherit;">
-        <div class="room-card">
-            <h3>DATA CENTER</h3>
-            <p>Ruang penyimpanan data yang aman.</p>
-        </div>
-    </a>
-
-    <a href="containment.html" style="text-decoration: none; color: inherit;">
-        <div class="room-card">
-            <h3>CONTAINMENT</h3>
-            <p>Ruang penyimpanan server.</p>
-        </div>
-    </a>
-</div>
-
+    <div class="footer">
+      Website ini sedang dalam pengembangan • Versi futuristik 2025
+    </div>
+  </div>
 </body>
 </html>
