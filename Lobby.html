@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lobby 360 Viewer</title>
+  <script src="https://www.marzipano.net/demos/sample-app/vendor/marzipano.js"></script>
+  <style>
+    html, body { height: 100%; margin: 0; }
+    #pano { width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+
+<div id="pano"></div>
+
+<script>
+  var viewer = new Marzipano.Viewer(document.getElementById('pano'));
+
+  var source = Marzipano.ImageUrlSource.fromString("Lobby.jpg");
+  var geometry = new Marzipano.EquirectGeometry([{ width: 4000 }]);
+  var limiter = Marzipano.RectilinearView.limit.traditional(1024, 100*Math.PI/180);
+  var view = new Marzipano.RectilinearView(null, limiter);
+
+  var scene = viewer.createScene({
+    source: source,
+    geometry: geometry,
+    view: view,
+    pinFirstLevel: true
+  });
+
+  scene.switchTo();
+</script>
+
+</body>
+</html>
